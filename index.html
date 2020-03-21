@@ -12,7 +12,9 @@
 <body>
     <section class="modal-window display-none" id="modal-window" onclick="closeModal(event)">
          <div class="modal-submit" id="modal-submit">
-            
+            <div class="modal-button" id='modal-button'>
+                <button>ok</button>
+             </div>
          </div>
      </section>
         <div class="content" id="home">
@@ -28,33 +30,27 @@
             </nav>
         </div>
     </header>
-   
- <section class="slider carousel" id='slider-section'>
-
-             <div class="slider-content item-container" id='slides'>
-                 <div class="slide slide-1 item active">
-                     <div class="all-phone">
-                         <img src="./assets/img/screenshot1.png" class="slider__img img-one" id="slider__img-one">
-                         <img src="./assets/img/screenshot2.png" class="slider__img img-two" id="slider__img-two">
-                         <img src="./assets/img/Home-Button.png" class="slider__button button-one" onclick="delWallpaperOne()">
-                         <img src="./assets/img/Home-Button.png" class="slider__button button-two" onclick="delWallpaperTwo()">
-                         <img src="./assets/img/camera.png" class="slider__phone phone-one">
-                         <img src="./assets/img/shadow.png" class="slider__shadow shadow-one">
-                         <img src="./assets/img/camera.png" class="slider__phone phone-two">
-                         <img src="./assets/img/shadow.png" class="slider__shadow shadow-two">
+   <section class="slider" id='slider-section'>
+            <div class="slider-content" id='slides'>
+                <div class="slide slide-1 showing">
+                         <img src="./assets/img/screenshot1.png" class="slider__img img-one" onclick="delWallpapaer()">
+                    <img src="./assets/img/screenshot2.png" class="slider__img img-two" onclick="delWallpapaer()">
+                    <img src="./assets/img/camera.png" class="slider__phone phone-one">
+                    <img src="./assets/img/shadow.png" class="slider__shadow shadow-one">
+                    <img src="./assets/img/camera.png" class="slider__phone phone-two">
+                    <img src="./assets/img/shadow.png" class="slider__shadow shadow-two">
                      </div>
                  </div>
                  
                 
-                  <div class="slide slide-2  blue item">
-                     <div class="all-phone">
+                  <div class="slide blue">
                          <img class="blue" src="./assets/img/slide_2.png">
                      </div>
                   </div>
                  
                  <div class="arrows">
-                     <img src="./assets/img/svg/arrow-left.svg" class="slider__arrow arrow-left arrow left" >
-                     <img src="./assets/img/svg/arrow-right.svg"  class="slider__arrow arrow-right arrow right">
+                     <img src="./assets/img/svg/arrow-left.svg" class="slider__arrow arrow-left" onclick="slider()">
+                    <img src="./assets/img/svg/arrow-right.svg" onclick="slider()" class="slider__arrow arrow-right">
                  </div>
         </div>
      
