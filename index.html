@@ -12,42 +12,48 @@
 <body>
     <section class="modal-window display-none" id="modal-window" onclick="closeModal(event)">
          <div class="modal-submit" id="modal-submit">
-             <div class="modal-button" id='modal-button'>
-                 <button>ok</button>
-              </div>
+            
          </div>
      </section>
-<div class="content">
-    <header class="navigation">
+        <div class="content" id="home">
+         <header class="navigation" id="header">
         <div class="navigation__content">
             <h1 class="navigation__logo">singolo<span class="logo-star">*</span></h1>
             <nav id="navigation" class="navigation__links">
-                <a class="link-active">home</a>
-                 <a href="#services">services</a>
-                 <a href="#portfolio">portfolio</a>
-                 <a href="#about">about</a>
-                 <a href="#contact">contact</a>
+                     <a href="#home"><span class="link-active" id="home_link">home</span></a>
+                     <a href="#services" ><span id="services_link">services</span></a>
+                     <a href="#portfolio" ><span id="portfolio_link">portfolio</span></a>
+                     <a href="#about" ><span id="about_link">about</span></a>
+                     <a href="#contact" ><span id="contact_link">contact</span></a>
             </nav>
         </div>
     </header>
    
- <section class="slider" id='slider-section'>
-             <div class="slider-content" id='slides'>
-                 <div class="slide slide-1 showing">
-                     <img src="./assets/img/screenshot1.png" class="slider__img img-one" onclick="delWallpapaer()">
-                     <img src="./assets/img/screenshot2.png" class="slider__img img-two" onclick="delWallpapaer()">
-                     <img src="./assets/img/camera.png" class="slider__phone phone-one">
-                     <img src="./assets/img/shadow.png" class="slider__shadow shadow-one">
-                     <img src="./assets/img/camera.png" class="slider__phone phone-two">
-                     <img src="./assets/img/shadow.png" class="slider__shadow shadow-two">
-                 </div>
-                <div class="slide blue">
-                     <img class="slide-2 blue" src="./assets/img/Slide-2.png">
-                 </div>
+ <section class="slider carousel" id='slider-section'>
 
+             <div class="slider-content item-container" id='slides'>
+                 <div class="slide slide-1 item active">
+                     <div class="all-phone">
+                         <img src="./assets/img/screenshot1.png" class="slider__img img-one" id="slider__img-one">
+                         <img src="./assets/img/screenshot2.png" class="slider__img img-two" id="slider__img-two">
+                         <img src="./assets/img/Home-Button.png" class="slider__button button-one" onclick="delWallpaperOne()">
+                         <img src="./assets/img/Home-Button.png" class="slider__button button-two" onclick="delWallpaperTwo()">
+                         <img src="./assets/img/camera.png" class="slider__phone phone-one">
+                         <img src="./assets/img/shadow.png" class="slider__shadow shadow-one">
+                         <img src="./assets/img/camera.png" class="slider__phone phone-two">
+                         <img src="./assets/img/shadow.png" class="slider__shadow shadow-two">
+                     </div>
+                 </div>
+                 
+                
+                  <div class="slide slide-2  blue item">
+                     <div class="all-phone">
+                         <img class="blue" src="./assets/img/slide_2.png">
+                     </div>
+                 
                  <div class="arrows">
-                     <img src="./assets/img/svg/arrow-left.svg" class="slider__arrow arrow-left" onclick="slider()">
-                     <img src="./assets/img/svg/arrow-right.svg" onclick="slider()" class="slider__arrow arrow-right">
+                     <img src="./assets/img/svg/arrow-left.svg" class="slider__arrow arrow-left arrow left" >
+                     <img src="./assets/img/svg/arrow-right.svg"  class="slider__arrow arrow-right arrow right">
                  </div>
         </div>
     </section>
@@ -160,11 +166,11 @@
             <p class="quote-text">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
             <div class="form-contacts-wrapper">
                 <form class="get-quote-form" id="form">
-                         <input id='name' type="text" maxlength="30" pattern="[A-Za-zА-яа-я]{1,30}" title="Имя может содержать только латинские буквы. Максимальная длина 30 символов" required class="input name-input" placeholder="Name (Required)">
+                         <input id='name' type="text" maxlength="30" pattern="[A-Za-zА-яа-я-\s']{1,30}" title="Имя может содержать только латинские буквы, пробелы, девисы и символ апострофа. Максимальная длина 30 символов" required class="input name-input" placeholder="Name (Required)">
                          <input id='email' type="email" required class="input email-input" placeholder="Email (Required)">
                          <input id='text' type="text" class="input subject-input" placeholder="Subject">
                          <textarea id='descr' class="input describe-input" placeholder="Describe your project in detail..."></textarea>
-                         <button type="button" class="input submit" onclick='getLetter()'>submit</button>
+                         <button type="submit" value="Submit" class="input submit">submit</button>
                 </form>
                 <div class="contacts">
                     <h3 class="contact-title">Contact Information</h3>
